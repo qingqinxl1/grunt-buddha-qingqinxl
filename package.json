@@ -3,10 +3,11 @@
   "version": "0.0.1",
   "description": "test gruntplugin",
   "repository": "https://github.com/qingqinxl1/grunt-buddha-qingqinxl",
+  "homepage": "http://qingqinxl1.github.io/grunt-buddha-qingqinxl/",
   "author": {
     "name": "qingqinxl",
-    "email": "qingqinxl@gmail.com",
-    "url": ""
+    "email": "xghuangxiaoli6698@163.com",
+    "url": "https://github.com/qingqinxl1"
   },
   "keywords": [
     "gruntplugin"
