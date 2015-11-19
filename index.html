@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>Grunt-buddha-qingqinxl by qingqinxl1</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>Grunt-buddha-qingqinxl</h1>
+        <h2>grunt test</h2>
+        <a href="https://github.com/qingqinxl1/grunt-buddha-qingqinxl" class="button"><small>View project on</small> GitHub</a>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h1>
+<a id="grunt-buddha-qingqinxl" class="anchor" href="#grunt-buddha-qingqinxl" aria-hidden="true"><span class="octicon octicon-link"></span></a>grunt-buddha-qingqinxl</h1>
+
+<blockquote>
+<p>test gruntplugin</p>
+</blockquote>
+
+<h2>
+<a id="getting-started" class="anchor" href="#getting-started" aria-hidden="true"><span class="octicon octicon-link"></span></a>Getting Started</h2>
+
+<p>This plugin requires Grunt.</p>
+
+<p>If you haven't used <a href="http://gruntjs.com/">Grunt</a> before, be sure to check out the <a href="http://gruntjs.com/getting-started">Getting Started</a> guide, as it explains how to create a <a href="http://gruntjs.com/sample-gruntfile">Gruntfile</a> as well as install and use Grunt plugins. Once you're familiar with that process, you may install this plugin with this command:</p>
+
+<div class="highlight highlight-source-shell"><pre>npm install grunt-buddha-qingqinxl --save-dev</pre></div>
+
+<p>Once the plugin has been installed, it may be enabled inside your Gruntfile with this line of JavaScript:</p>
+
+<div class="highlight highlight-source-js"><pre>grunt.loadNpmTasks(<span class="pl-s"><span class="pl-pds">'</span>grunt-buddha-qingqinxl<span class="pl-pds">'</span></span>);</pre></div>
+
+<h2>
+<a id="the-buddha_qingqinxl-task" class="anchor" href="#the-buddha_qingqinxl-task" aria-hidden="true"><span class="octicon octicon-link"></span></a>The "buddha_qingqinxl" task</h2>
+
+<h3>
+<a id="overview" class="anchor" href="#overview" aria-hidden="true"><span class="octicon octicon-link"></span></a>Overview</h3>
+
+<p>In your project's Gruntfile, add a section named <code>buddha_qingqinxl</code> to the data object passed into <code>grunt.initConfig()</code>.</p>
+
+<div class="highlight highlight-source-js"><pre>grunt.initConfig({
+  buddha_qingqinxl<span class="pl-k">:</span> {
+    options<span class="pl-k">:</span> {
+        who<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>buddha_qingqinxl<span class="pl-pds">'</span></span>,
+        commentSymbol<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>//<span class="pl-pds">'</span></span>
+      },
+    dist<span class="pl-k">:</span> [<span class="pl-s"><span class="pl-pds">'</span>example/*.js<span class="pl-pds">'</span></span>]
+  }
+})</pre></div>
+
+<h3>
+<a id="options" class="anchor" href="#options" aria-hidden="true"><span class="octicon octicon-link"></span></a>Options</h3>
+
+<h4>
+<a id="optionswho" class="anchor" href="#optionswho" aria-hidden="true"><span class="octicon octicon-link"></span></a>options.who</h4>
+
+<p>Type: <code>String</code>
+Default: <code>buddha_qingqinxl</code>
+who: <code>String</code>
+添加神兽保佑还是佛祖保佑的js注释，默认为佛祖保佑，神兽保佑选项值为：alpaca</p>
+
+<p>A string value that is used to do something with whatever.</p>
+
+<h4>
+<a id="optionscommentsymbol" class="anchor" href="#optionscommentsymbol" aria-hidden="true"><span class="octicon octicon-link"></span></a>options.commentSymbol</h4>
+
+<p>Type: <code>String</code>
+Default value: <code>//</code>
+添加神兽保佑或者佛祖保佑注释以js注释//开头</p>
+
+<p>A string value that is used to do something else with whatever else.</p>
+
+<h3>
+<a id="usage-examples" class="anchor" href="#usage-examples" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage Examples</h3>
+
+<h4>
+<a id="default-options" class="anchor" href="#default-options" aria-hidden="true"><span class="octicon octicon-link"></span></a>Default Options</h4>
+
+<p>In this example, the default options are used to do something with whatever. So if the <code>testing</code> file has the content <code>Testing</code> and the <code>123</code> file had the content <code>1 2 3</code>, the generated result would be <code>Testing, 1 2 3.</code></p>
+
+<div class="highlight highlight-source-js"><pre>grunt.initConfig({
+  buddha_qingqinxl<span class="pl-k">:</span> {
+    options<span class="pl-k">:</span> {},
+    files<span class="pl-k">:</span> {
+      <span class="pl-s"><span class="pl-pds">'</span>dest/default_options<span class="pl-pds">'</span></span><span class="pl-k">:</span> [<span class="pl-s"><span class="pl-pds">'</span>src/testing<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>src/123<span class="pl-pds">'</span></span>],
+    },
+  },
+})</pre></div>
+
+<h2>
+<a id="contributing" class="anchor" href="#contributing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contributing</h2>
+
+<p>In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using <a href="http://gruntjs.com/">Grunt</a>.</p>
+
+<h2>
+<a id="release-history" class="anchor" href="#release-history" aria-hidden="true"><span class="octicon octicon-link"></span></a>Release History</h2>
+
+<p><em>(Nothing yet)</em></p>
+
+<h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h2>
+
+<p>Copyright (c) 2015 qingqinxl. Licensed under the MIT license.</p>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/qingqinxl1/grunt-buddha-qingqinxl/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/qingqinxl1/grunt-buddha-qingqinxl/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/qingqinxl1/grunt-buddha-qingqinxl"></a> is maintained by <a href="https://github.com/qingqinxl1">qingqinxl1</a>.</p>
+
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+  
+  </body>
+</html>
