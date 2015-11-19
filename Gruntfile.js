@@ -50,7 +50,7 @@ module.exports = function(grunt) {
         }
       }*/
       options: {
-        who: 'alpaca',
+        who: 'buddha_qingqinxl',
         commentSymbol: '//'
       },
       dist: ['test/fixtures/*.js']
