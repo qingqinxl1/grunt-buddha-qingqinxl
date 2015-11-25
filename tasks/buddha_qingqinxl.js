@@ -35,13 +35,17 @@ module.exports = function(grunt) {
       },
       commentFilePath = path.join(__dirname, commentFilePathMap[who]),
       commentContent = grunt.file.read(commentFilePath),
-      lineCommentArr = commentContent.split(grunt.util.normalizelf('\n'));
+      lineCommentArr = commentContent.split(grunt.util.normalizelf('\n')),
+      newCommentContent = '';
 
-    lineCommentArr.forEach(function(val, idx, arr) {
+    /*lineCommentArr.forEach(function(val, idx, arr) {
       arr[idx] = commentSymbol + val;
-    });
-
-    commentContent = lineCommentArr.join(grunt.util.normalizelf('\n'));
+    });*/
+    for(var i = 0, len = lineCommentArr.length; i < len; i++){
+      var curLine = lineCommentArr[i];
+      newCommentContent += commentSymbol + curLine + grunt.util.normalizelf('\n');
+    }
+    //newCommentContent = lineCommentArr.join(grunt.util.normalizelf('\n'));
 
 
 
@@ -60,7 +64,7 @@ module.exports = function(grunt) {
         var originalFileConent = grunt.file.read(filepath);
 
         if (!reg[who].test(originalFileConent)) {
-          var newFileConent = commentContent + grunt.util.normalizelf('\n') +
+          var newFileConent = newCommentContent + grunt.util.normalizelf('\n') +
             originalFileConent;
           grunt.file.write(filepath, newFileConent);
         }
